@@ -10,7 +10,7 @@
     {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["docker.io/jenkins/inbound-agent"],
-      "versioning": "regex:^(?<major>\\d+)\\.v(?\\w+)-(?<patch>\\d+)$"
+      "versioning": "regex:^(?<major>\\d+)\\.v(\\w+)-(?<patch>\\d+)$"
     }
   ]
 }
