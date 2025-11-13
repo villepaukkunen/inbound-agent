@@ -41,7 +41,7 @@ pipeline {
                 }
             }
         }
-        stage('tag image') {
+        stage('Tag image') {
             steps {
                 container('buildah') {
                     sh '''
