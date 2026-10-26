@@ -30,6 +30,9 @@ pipeline {
                         script: ''' curl -sX GET https://raw.githubusercontent.com/villepaukkunen/inbound-agent/refs/heads/main/Dockerfile | grep FROM | awk -F ':' '/inbound-agent/{print $2;exit}' ''',
                         returnStdout: true).trim()
                 }
+                sh '''
+                    printf "IMAGE_TAG=$IMAGE_TAG"
+                '''
             }
         }
         stage('Build image') {
