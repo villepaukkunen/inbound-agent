@@ -31,7 +31,7 @@ pipeline {
                         returnStdout: true).trim()
                 }
                 sh '''
-                    printf "IMAGE_TAG=$IMAGE_TAG"
+                    printf "IMAGE_TAG=${IMAGE_TAG}"
                 '''
             }
         }
