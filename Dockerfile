@@ -1,4 +1,4 @@
-FROM docker.io/jenkins/inbound-agent:3395.v6e5377b_0fb_3c-1-jdk25
+FROM docker.io/jenkins/inbound-agent:3395.v6e5377b_0fb_3c-2-jdk25
 USER root
 RUN apt-get update && apt-get install -y rsync
 RUN HUGO_VERSION=$(curl -sX GET https://raw.githubusercontent.com/gohugoio/hugo/refs/heads/master/hugoreleaser.env | grep HUGORELEASER_TAG | awk -F 'v' '/HUGORELEASER_TAG/{print $2;exit}') && \
